@@ -81,7 +81,7 @@ export function Contact() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
+            <div className="fade-in slide-in-left">
               <h3 className="text-2xl font-bold mb-6">Thông tin liên hệ</h3>
               
               <div className="space-y-6">
@@ -130,7 +130,7 @@ export function Contact() {
               </div>
             </div>
             
-            <div>
+            <div className="fade-in slide-in-right">
               <Card className="shadow-2xl border border-border card-gradient">
                 <CardHeader>
                   <CardTitle className="text-2xl">Gửi yêu cầu tư vấn</CardTitle>
@@ -204,7 +204,7 @@ export function Contact() {
                     
                     <Button
                       type="submit"
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover-glow transition-all duration-300 hover:scale-105"
                       disabled={contactMutation.isPending}
                       data-testid="button-submit-contact"
                     >

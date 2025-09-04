@@ -23,7 +23,7 @@ export function Testimonials() {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="testimonials-title">
             Khách hàng tin tưởng
           </h2>
@@ -34,12 +34,12 @@ export function Testimonials() {
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-border animated-border" data-testid={`testimonial-${index}`}>
+            <Card key={index} className="shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-border animated-border fade-in hover-glow" style={{ animationDelay: `${index * 0.2}s` }} data-testid={`testimonial-${index}`}>
               <CardContent className="p-6">
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4 fade-in-delay-1">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-current" />
+                      <Star key={i} className="h-4 w-4 fill-current hover:scale-125 transition-transform duration-200" style={{ animationDelay: `${i * 0.1}s` }} />
                     ))}
                   </div>
                 </div>

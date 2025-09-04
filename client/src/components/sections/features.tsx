@@ -37,7 +37,7 @@ export function Features() {
   return (
     <section id="features" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="features-title">
             Tính năng nổi bật
           </h2>
@@ -52,11 +52,12 @@ export function Features() {
             return (
               <div 
                 key={index}
-                className="text-center p-8 rounded-xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all duration-300 hover:shadow-lg hover:scale-105 border border-transparent hover:border-primary/20"
+                className="text-center p-8 rounded-xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all duration-300 hover:shadow-lg hover:scale-105 border border-transparent hover:border-primary/20 fade-in hover-glow"
+                style={{ animationDelay: `${index * 0.1}s` }}
                 data-testid={`feature-${index}`}
               >
-                <div className="w-14 h-14 feature-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6 shadow-md">
-                  <IconComponent className="h-6 w-6 text-primary" />
+                <div className="w-14 h-14 feature-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6 shadow-md pulse-slow">
+                  <IconComponent className="h-6 w-6 text-primary hover:rotate-12 transition-transform duration-300" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
