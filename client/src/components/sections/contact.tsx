@@ -86,7 +86,7 @@ export function Contact() {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4" data-testid="contact-address">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 feature-icon-gradient rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export function Contact() {
                 </div>
                 
                 <div className="flex items-start space-x-4" data-testid="contact-phone">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 feature-icon-gradient rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -106,7 +106,7 @@ export function Contact() {
                 </div>
                 
                 <div className="flex items-start space-x-4" data-testid="contact-email">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 feature-icon-gradient rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -116,7 +116,7 @@ export function Contact() {
                 </div>
                 
                 <div className="flex items-start space-x-4" data-testid="contact-hours">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 feature-icon-gradient rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -131,7 +131,7 @@ export function Contact() {
             </div>
             
             <div>
-              <Card className="shadow-lg border border-border">
+              <Card className="shadow-2xl border border-border card-gradient">
                 <CardHeader>
                   <CardTitle className="text-2xl">Gửi yêu cầu tư vấn</CardTitle>
                 </CardHeader>
@@ -194,7 +194,7 @@ export function Contact() {
                       <Label htmlFor="message">Tin nhắn</Label>
                       <Textarea
                         id="message"
-                        value={formData.message}
+                        value={formData.message || ""}
                         onChange={(e) => handleInputChange("message", e.target.value)}
                         placeholder="Mô tả nhu cầu của bạn..."
                         rows={4}

@@ -52,10 +52,10 @@ export function Features() {
             return (
               <div 
                 key={index}
-                className="text-center p-6 rounded-xl hover:bg-muted/50 transition-colors"
+                className="text-center p-8 rounded-xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all duration-300 hover:shadow-lg hover:scale-105 border border-transparent hover:border-primary/20"
                 data-testid={`feature-${index}`}
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 feature-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6 shadow-md">
                   <IconComponent className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">{feature.title}</h3>

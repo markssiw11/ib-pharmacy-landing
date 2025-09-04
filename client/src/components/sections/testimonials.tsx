@@ -34,7 +34,7 @@ export function Testimonials() {
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="shadow-md" data-testid={`testimonial-${index}`}>
+            <Card key={index} className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-border animated-border" data-testid={`testimonial-${index}`}>
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400">
@@ -45,7 +45,7 @@ export function Testimonials() {
                 </div>
                 <p className="text-muted-foreground mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                  <div className="w-10 h-10 feature-icon-gradient rounded-full flex items-center justify-center mr-3 shadow-md">
                     <User className="h-5 w-5 text-primary" />
                   </div>
                   <div>

@@ -18,9 +18,9 @@ export function Platforms() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Distributor Platform */}
-          <Card className="hover-lift border border-border" data-testid="card-distributor">
+          <Card className="hover-lift border border-border animated-border shadow-xl bg-gradient-to-br from-white to-blue-50/30" data-testid="card-distributor">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 feature-icon-gradient rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Warehouse className="h-8 w-8 text-primary" />
               </div>
               <CardTitle className="text-2xl mb-2">Nền tảng Nhà phân phối</CardTitle>
@@ -65,9 +65,9 @@ export function Platforms() {
           </Card>
           
           {/* Pharmacy Platform */}
-          <Card className="hover-lift border border-border" data-testid="card-pharmacy">
+          <Card className="hover-lift border border-border animated-border shadow-xl bg-gradient-to-br from-white to-green-50/30" data-testid="card-pharmacy">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <Pill className="h-8 w-8 text-accent" />
               </div>
               <CardTitle className="text-2xl mb-2">Nền tảng Nhà thuốc</CardTitle>
