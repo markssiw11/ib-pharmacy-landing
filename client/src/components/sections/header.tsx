@@ -20,7 +20,7 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Logo className="hover:scale-110 transition-transform duration-300" />
+            <Logo className="hover:scale-105 transition-transform duration-500" />
             <div>
               <h1 className="text-xl font-bold text-primary">IB Pharmacy</h1>
               <p className="text-xs text-muted-foreground">Hệ thống quản lý dược phẩm</p>
@@ -51,7 +51,7 @@ export function Header() {
             </button>
             <Button 
               onClick={() => scrollToSection('platforms')}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover-glow transition-all duration-300"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-500 hover:shadow-md"
               data-testid="button-get-started"
             >
               Bắt đầu ngay

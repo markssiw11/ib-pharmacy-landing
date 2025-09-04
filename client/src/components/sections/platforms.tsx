@@ -18,9 +18,9 @@ export function Platforms() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Distributor Platform */}
-          <Card className="hover-lift border border-border animated-border shadow-xl bg-gradient-to-br from-white to-blue-50/30 fade-in slide-in-left hover-glow" data-testid="card-distributor">
+          <Card className="border border-border shadow-xl bg-gradient-to-br from-white to-blue-50/30 fade-in slide-in-left transition-all duration-500 hover:shadow-2xl hover:-translate-y-1" data-testid="card-distributor">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 feature-icon-gradient rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg bounce-in">
+              <div className="w-16 h-16 feature-icon-gradient rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg gentle-scale">
                 <Warehouse className="h-8 w-8 text-primary" />
               </div>
               <CardTitle className="text-2xl mb-2">Nền tảng Nhà phân phối</CardTitle>
@@ -65,9 +65,9 @@ export function Platforms() {
           </Card>
           
           {/* Pharmacy Platform */}
-          <Card className="hover-lift border border-border animated-border shadow-xl bg-gradient-to-br from-white to-green-50/30 fade-in slide-in-right hover-glow" data-testid="card-pharmacy">
+          <Card className="border border-border shadow-xl bg-gradient-to-br from-white to-green-50/30 fade-in slide-in-right transition-all duration-500 hover:shadow-2xl hover:-translate-y-1" data-testid="card-pharmacy">
             <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg bounce-in">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg gentle-scale">
                 <Pill className="h-8 w-8 text-accent" />
               </div>
               <CardTitle className="text-2xl mb-2">Nền tảng Nhà thuốc</CardTitle>
