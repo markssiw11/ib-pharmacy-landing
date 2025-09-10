@@ -144,14 +144,20 @@ export function Platforms() {
                 asChild
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                 data-testid="button-pharmacy-login"
-                onClick={() => {
-                  Tracker.track("GO_TO_PHARMACY");
-                }}
               >
                 <a
                   href="https://dev.app.ibpharmacy.com.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    Tracker.track("GO_TO_PHARMACY");
+                    window.open(
+                      "https://dev.app.ibpharmacy.com.vn/",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Đăng nhập Nhà thuốc
