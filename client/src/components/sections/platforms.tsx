@@ -159,7 +159,7 @@ export function Platforms() {
                   }}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
-                  Đăng nhập Nhà thuốc
+                  Đăng nhập Nhà thuốc 😀
                 </a>
               </Button>
             </CardContent>
