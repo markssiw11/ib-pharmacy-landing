@@ -93,7 +93,6 @@ export function Platforms() {
             </CardContent>
           </Card>
 
-          {/* Pharmacy Platform */}
           <Card
             className="border border-border shadow-xl bg-gradient-to-br from-white to-green-50/30 fade-in slide-in-right transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
             data-testid="card-pharmacy"
