@@ -38,7 +38,8 @@ export const Tracker = {
   track: (event: string, properties?: Record<string, any>) => {
     try {
       if (window.Tracker && typeof window.Tracker.track === "function") {
-        window.Tracker.track(event, properties);
+        console.log(`Tracking event: ${event}`, properties || {});
+        window?.Tracker?.track(event, properties);
       } else {
         console.warn(
           "Tracker is not initialized or track function is not available."
