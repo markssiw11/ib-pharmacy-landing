@@ -77,14 +77,25 @@ export function Platforms() {
                 asChild
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                 data-testid="button-distributor-login"
-                onClick={() => {
-                  Tracker.track("GO_TO_DISTRIBUTOR");
-                }}
               >
                 <a
                   href="https://dev.distributor.ibpharmacy.com.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    try {
+                      Tracker.track("GO_TO_DISTRIBUTOR");
+                      console.log("Distributor tracker fired successfully");
+                    } catch (err) {
+                      console.error("Tracker error:", err);
+                    }
+                    window.open(
+                      "https://dev.distributor.ibpharmacy.com.vn/",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Đăng nhập Nhà phân phối
@@ -150,7 +161,12 @@ export function Platforms() {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     e.preventDefault();
-                    Tracker.track("GO_TO_PHARMACY");
+                    try {
+                      Tracker.track("GO_TO_PHARMACY");
+                      console.log("Pharmacy tracker fired successfully");
+                    } catch (err) {
+                      console.error("Tracker error:", err);
+                    }
                     window.open(
                       "https://dev.app.ibpharmacy.com.vn/",
                       "_blank",
@@ -159,7 +175,7 @@ export function Platforms() {
                   }}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
-                  Đăng nhập Nhà thuốc 😀
+                  Đăng nhập Nhà thuốc
                 </a>
               </Button>
             </CardContent>
