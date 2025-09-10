@@ -161,12 +161,9 @@ export function Platforms() {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     e.preventDefault();
-                    try {
-                      Tracker.track("GO_TO_PHARMACY");
-                      console.log("Pharmacy tracker fired successfully");
-                    } catch (err) {
-                      console.error("Tracker error:", err);
-                    }
+                    Tracker.track("GO_TO_PHARMACY");
+                    console.log("Pharmacy tracker fired successfully");
+
                     window.open(
                       "https://dev.app.ibpharmacy.com.vn/",
                       "_blank",
