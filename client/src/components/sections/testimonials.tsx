@@ -87,17 +87,17 @@ export function Testimonials() {
                 <motion.div
                   className="absolute inset-0 bg-white"
                   initial={{
-                    background: "white",
+                    backgroundImage: "white",
                     opacity: 1,
                   }}
                   animate={{
-                    background: isHovered ? "linear-gradient(180deg, #015AA2 0%, #00213C 100%)" : "white",
+                    backgroundImage: isHovered ? "linear-gradient(180deg, #015AA2 0%, #00213C 100%)" : "white",
                     opacity: isHovered ? 0.95 : 1,
                   }}
                   transition={{
-                    duration: 0.4,
-                    ease: [0.4, 0, 0.2, 1],
-                    background: { duration: 0.5, ease: "easeInOut" },
+                    duration: 1.3,
+                    ease: "linear",
+                    delay: 0.05,
                   }}
                 />
 
@@ -108,17 +108,15 @@ export function Testimonials() {
                     initial={{
                       opacity: 0,
                       scale: 0.8,
-                      rotate: -10,
                     }}
                     animate={{
                       opacity: 0.15,
                       scale: 1,
-                      rotate: 0,
                     }}
                     transition={{
                       duration: 0.5,
                       ease: [0.4, 0, 0.2, 1],
-                      delay: 0.1,
+                      delay: 0.05,
                     }}>
                     <svg
                       width="124"
@@ -178,7 +176,7 @@ export function Testimonials() {
                     transition={{
                       duration: 0.4,
                       ease: [0.4, 0, 0.2, 1],
-                      delay: isHovered ? 0.1 : 0,
+                      delay: 0.05,
                     }}>
                     "{testimonial.content}"
                   </motion.p>
@@ -191,9 +189,9 @@ export function Testimonials() {
                       textShadow: isHovered ? "0 1px 2px rgba(0,0,0,0.1)" : "none",
                     }}
                     transition={{
-                      duration: 0.4,
+                      duration: 1.4,
                       ease: [0.4, 0, 0.2, 1],
-                      delay: isHovered ? 0.15 : 0,
+                      delay: 0.05,
                     }}>
                     <div className="w-10 h-10 feature-icon-gradient rounded-full flex items-center justify-center mr-3 shadow-md">
                       <User className="h-5 w-5 text-primary" />

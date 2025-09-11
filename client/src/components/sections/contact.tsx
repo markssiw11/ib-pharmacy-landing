@@ -107,7 +107,7 @@ export function Contact() {
                 data-testid="contact-phone">
                 <Phone className="h-5 w-auto shrink-0 text-white" />
 
-                <p className="text-white plus-jakarta-sans font-light">+84902765231</p>
+                <p className="text-white plus-jakarta-sans font-light"> +84 902765231</p>
               </div>
 
               <div
@@ -115,7 +115,7 @@ export function Contact() {
                 data-testid="contact-email">
                 <Mail className="h-5 w-auto shrink-0 text-white" />
 
-                <p className="text-white plus-jakarta-sans font-light">info@ib-pharmacy.com</p>
+                <p className="text-white plus-jakarta-sans font-light">info@ib-pharmacy.com.vn</p>
               </div>
 
               <div
@@ -123,9 +123,7 @@ export function Contact() {
                 data-testid="contact-hours">
                 <Clock className="h-5 w-5 shrink-0 text-white" />
 
-                <p className="text-white plus-jakarta-sans font-light">
-                  Thứ 2 - Thứ 6: 8:00 - 18:00 | Thứ 7: 8:00 - 12:00
-                </p>
+                <p className="text-white plus-jakarta-sans font-light">Thứ 2 - Thứ 6 | 8:00 - 18:00</p>
               </div>
             </div>
           </div>
