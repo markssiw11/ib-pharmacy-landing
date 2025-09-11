@@ -115,7 +115,7 @@ export function Contact() {
                 data-testid="contact-email">
                 <Mail className="h-5 w-auto shrink-0 text-white" />
 
-                <p className="text-white plus-jakarta-sans font-light">info@ib-pharmacy.com.vn</p>
+                <p className="text-white plus-jakarta-sans font-light">info@ibpharmacy.com.vn</p>
               </div>
 
               <div
