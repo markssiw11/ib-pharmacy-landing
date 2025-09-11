@@ -1,10 +1,11 @@
+import { Contact } from "@/components/sections/contact";
+import { Features } from "@/components/sections/features";
+import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import { Platforms } from "@/components/sections/platforms";
-import { Features } from "@/components/sections/features";
+import { Statistics } from "@/components/sections/statistics";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Contact } from "@/components/sections/contact";
-import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Statistics />
         <Platforms />
         <Features />
-        <Testimonials />
         <Contact />
+        <Testimonials />
       </main>
       <Footer />
     </div>

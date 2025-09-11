@@ -1,69 +1,85 @@
-import { Button } from "@/components/ui/button";
-import { Rocket, Play } from "lucide-react";
+import heroDashboard from "@assets/hero-dashboard.svg";
+import { motion } from "framer-motion";
+import { ArrowRight, Play } from "lucide-react";
+import { Button } from "../ui/button";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="enhanced-gradient text-primary-foreground pt-24 pb-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/5">
-        <div className="absolute top-0 left-0 w-full h-full opacity-15">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-white/8 gentle-glow"></div>
-          <div className="absolute top-40 right-20 w-48 h-48 bg-white/4 gentle-glow" style={{ animationDelay: '4s' }}></div>
-          <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-white/6 gentle-glow" style={{ animationDelay: '8s' }}></div>
-        </div>
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight fade-in" data-testid="hero-title">
-            Giải pháp quản lý <br />
-            <span className="text-secondary">dược phẩm hiện đại</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed fade-in fade-in-delay-1" data-testid="hero-description">
-            Hệ thống tích hợp hoàn chỉnh cho nhà thuốc và nhà phân phối, 
-            tối ưu hóa quy trình quản lý và nâng cao hiệu quả kinh doanh
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in fade-in-delay-2">
-            <Button 
-              onClick={() => scrollToSection('platforms')}
-              className="bg-white text-primary px-8 py-4 text-lg font-semibold hover:bg-gray-50 shadow-lg transition-all duration-500 hover:shadow-xl"
-              data-testid="button-explore"
-            >
-              <Rocket className="mr-2 h-5 w-5" />
-              Khám phá ngay
-            </Button>
-            <Button 
-              variant="outline"
-              onClick={() => scrollToSection('platforms')}
-              className="border-2 border-white/80 text-white bg-transparent px-8 py-4 text-lg font-semibold hover:bg-white/10 hover:border-white transition-all duration-500"
-              data-testid="button-demo"
-            >
-              <Play className="mr-2 h-5 w-5" />
+    <section className="enhanced-gradient text-primary-foreground pt-28 relative overflow-hidden min-h-[80vh] flex items-center px-10">
+      <div className="absolute inset-0 z-10 hero-background-img" />
+      <div className="container relative mx-auto grid grid-cols-2 z-10">
+        <motion.div
+          className="flex flex-col justify-center gap-10 col-span-2 xl:col-span-1"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}>
+          <motion.div
+            className="flex flex-col gap-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}>
+            <h1 className="text-4xl md:text-[56px] font-bold leading-tight">
+              Giải pháp quản lý <br />
+              <span className="text-secondary">dược phẩm hiện đại</span>
+            </h1>
+            <p className="text-blue-50">
+              Hệ thống tích hợp hoàn chỉnh cho nhà thuốc và nhà phân phối, <br /> tối ưu hóa quy trình quản lý và nâng
+              cao hiệu quả kinh doanh.
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex gap-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}>
+            <Button>
+              <Play className="w-4 h-4" />
               Xem demo
             </Button>
-          </div>
-          
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center fade-in fade-in-delay-3">
-            <div data-testid="stat-pharmacies">
-              <div className="text-3xl font-bold">500+</div>
-              <div className="opacity-80">Nhà thuốc tin dùng</div>
-            </div>
-            <div data-testid="stat-distributors">
-              <div className="text-3xl font-bold">50+</div>
-              <div className="opacity-80">Nhà phân phối</div>
-            </div>
-            <div data-testid="stat-uptime">
-              <div className="text-3xl font-bold">99.9%</div>
-              <div className="opacity-80">Thời gian hoạt động</div>
-            </div>
-          </div>
-        </div>
+            <Button variant="secondary">
+              Khám phá ngay
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </motion.div>
+        </motion.div>
+      </div>
+      <div className="absolute w-1/2 h-[630px] right-0 bottom-0 z-10 hidden xl:block">
+        <motion.div
+          initial={{ x: "100%", opacity: 0, rotate: 0 }}
+          animate={{ x: 0, opacity: 1, rotate: 5.08 }}
+          transition={{
+            duration: 0.75,
+            delay: 0.2,
+            ease: "easeOut",
+          }}
+          className="absolute left-0 -bottom-10 w-full max-w-[560px] h-auto aspect-[560/519] bg-white/10 rounded-xl"
+        />
+        <motion.div
+          initial={{ x: "100%", opacity: 0, rotate: 0 }}
+          animate={{ x: 0, opacity: 1, rotate: 5.08 }}
+          transition={{
+            duration: 0.75,
+            delay: 0.7,
+            ease: "easeOut",
+          }}
+          className="absolute left-10 -bottom-1/4 w-full max-w-[560px] h-auto aspect-[560/701] bg-white/10 rounded-xl"
+        />
+        <motion.div
+          initial={{ x: "100%", opacity: 0, rotate: 0 }}
+          animate={{ x: 0, opacity: 1, rotate: 5.08 }}
+          transition={{
+            duration: 0.75,
+            delay: 1.2,
+            ease: "easeOut",
+          }}
+          className="hero-dashboard-img"></motion.div>
       </div>
     </section>
   );

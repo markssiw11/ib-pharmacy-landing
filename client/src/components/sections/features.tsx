@@ -1,69 +1,85 @@
-import { Shield, Smartphone, TrendingUp, RefreshCw, Headphones, Settings } from "lucide-react";
+import { motion } from "framer-motion";
+import customOnUsageIcon from "@assets/custom-on-usage.svg";
+import customerSupportIcon from "@assets/customer-support.svg";
+import dataAnalysisIcon from "@assets/data-analysis.svg";
+import distributorPlatformIcon from "@assets/distributor-platform.svg";
+import multiPlatformIcon from "@assets/multi-platform.svg";
+import realtimeSyncIcon from "@assets/realtime-sync.svg";
 
 export function Features() {
   const features = [
     {
-      icon: Shield,
-      title: "Bảo mật cao",
-      description: "Tuân thủ các tiêu chuẩn bảo mật dữ liệu y tế quốc tế"
+      thumbnail: customOnUsageIcon,
+      title: "Bảo mật dữ liệu toàn diện",
+      description: "Tuân thủ chặt chẽ các tiêu chuẩn quốc tế, đảm bảo an toàn tuyệt đối cho dữ liệu y tế.",
     },
     {
-      icon: Smartphone,
-      title: "Đa nền tảng",
-      description: "Truy cập mọi lúc mọi nơi trên máy tính và điện thoại"
+      thumbnail: multiPlatformIcon,
+      title: "Hỗ trợ đa nền tảng linh hoạt",
+      description:
+        "Truy cập mọi lúc, mọi nơi trên cả máy tính và điện thoại, đảm bảo trải nghiệm liền mạch và tiện lợi cho người dùng.",
     },
     {
-      icon: TrendingUp,
-      title: "Phân tích thông minh",
-      description: "Báo cáo chi tiết giúp tối ưu hóa kinh doanh"
+      thumbnail: dataAnalysisIcon,
+      title: "Phân tích dữ liệu thông minh và chính xác",
+      description:
+        "Báo cáo chi tiết, trực quan giúp doanh nghiệp nắm bắt tình hình và tối ưu hóa hoạt động kinh doanh hiệu quả hơn.",
     },
     {
-      icon: RefreshCw,
-      title: "Đồng bộ thời gian thực",
-      description: "Dữ liệu được cập nhật liên tục giữa các nền tảng"
+      thumbnail: realtimeSyncIcon,
+      title: "Đồng bộ thời gian thực trên mọi thiết bị",
+      description:
+        "Dữ liệu được cập nhật liên tục và đồng bộ hóa giữa các nền tảng, đảm bảo mọi thông tin luôn mới nhất và chính xác.",
     },
     {
-      icon: Headphones,
-      title: "Hỗ trợ 24/7",
-      description: "Đội ngũ kỹ thuật sẵn sàng hỗ trợ mọi lúc"
+      thumbnail: customerSupportIcon,
+      title: "Đội ngũ hỗ trợ 24/7",
+      description: "Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ mọi lúc, đảm bảo giải quyết nhanh chóng mọi vấn đề của bạn.",
     },
     {
-      icon: Settings,
-      title: "Tùy chỉnh linh hoạt",
-      description: "Điều chỉnh theo nhu cầu riêng của từng doanh nghiệp"
-    }
+      thumbnail: distributorPlatformIcon,
+      title: "Tùy chỉnh linh hoạt theo nhu cầu sử dụng",
+      description:
+        "Hệ thống có thể điều chỉnh linh hoạt để phù hợp với nhu cầu và quy trình riêng của từng doanh nghiệp.",
+    },
   ];
 
   return (
-    <section id="features" className="py-20">
+    <section
+      id="features"
+      className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="features-title">
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4"
+            data-testid="features-title">
             Tính năng nổi bật
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="features-description">
+          <p
+            className="text-base text-muted-foreground max-w-3xl mx-auto"
+            data-testid="features-description">
             Được thiết kế dành riêng cho ngành dược phẩm Việt Nam với các tính năng tiên tiến
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div 
-                key={index}
-                className="text-center p-8 rounded-xl hover:bg-gradient-to-br hover:from-primary/3 hover:to-primary/5 transition-all duration-500 hover:shadow-md border border-transparent hover:border-primary/10 fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-                data-testid={`feature-${index}`}
-              >
-                <div className="w-14 h-14 feature-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6 shadow-md">
-                  <IconComponent className="h-6 w-6 text-primary transition-transform duration-500 hover:scale-110" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
-              </div>
-            );
-          })}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 space-y-6"
+              data-testid={`feature-${index}`}>
+              <img
+                src={feature.thumbnail}
+                alt={feature.title}
+              />
+              <h3 className="font-bold text-lg mb-4 text-center">{feature.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed text-center">{feature.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
