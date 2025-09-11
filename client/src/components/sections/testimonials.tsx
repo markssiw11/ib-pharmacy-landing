@@ -87,11 +87,11 @@ export function Testimonials() {
                 <motion.div
                   className="absolute inset-0 bg-white"
                   initial={{
-                    backgroundImage: "white",
+                    background: "white",
                     opacity: 1,
                   }}
                   animate={{
-                    backgroundImage: isHovered ? "linear-gradient(180deg, #015AA2 0%, #00213C 100%)" : "white",
+                    background: isHovered ? "linear-gradient(180deg, #015AA2 0%, #00213C 100%)" : "white",
                     opacity: isHovered ? 0.95 : 1,
                   }}
                   transition={{
