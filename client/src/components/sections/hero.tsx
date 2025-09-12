@@ -19,31 +19,46 @@ export function Hero() {
           className="flex flex-col justify-center gap-10 col-span-2 xl:col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}>
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <motion.div
             className="flex flex-col gap-3"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}>
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
             <h1 className="text-4xl md:text-[56px] font-bold leading-tight">
               Giải pháp quản lý <br />
               <span className="text-secondary">dược phẩm hiện đại</span>
             </h1>
             <p className="text-blue-50">
-              Hệ thống tích hợp hoàn chỉnh cho nhà thuốc và nhà phân phối, <br /> tối ưu hóa quy trình quản lý và nâng
-              cao hiệu quả kinh doanh.
+              Hệ thống tích hợp hoàn chỉnh cho nhà thuốc và nhà phân phối,{" "}
+              <br /> tối ưu hóa quy trình quản lý và nâng cao hiệu quả kinh
+              doanh.
             </p>
           </motion.div>
           <motion.div
             className="flex gap-3"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}>
-            <Button>
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          >
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/watch?v=5JaDwJha2OQ",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               <Play className="w-4 h-4" />
               Xem demo
             </Button>
-            <Button variant="secondary">
+            <Button
+              variant="secondary"
+              onClick={() => scrollToSection("platforms")}
+            >
               Khám phá ngay
               <ArrowRight className="w-4 h-4" />
             </Button>
@@ -79,7 +94,8 @@ export function Hero() {
             delay: 1.2,
             ease: "easeOut",
           }}
-          className="hero-dashboard-img"></motion.div>
+          className="hero-dashboard-img"
+        ></motion.div>
       </div>
     </section>
   );
