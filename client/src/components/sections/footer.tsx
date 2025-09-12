@@ -12,8 +12,8 @@ export function Footer() {
               <span className="text-xl font-bold text-white">IB Pharmacy</span>
             </div>
             <p className="text-[#F5FAFF] text-sm">
-              Giải pháp quản lý dược phẩm hiện đại, kết nối nhà thuốc và nhà phân phối trong một hệ sinh thái hoàn
-              chỉnh.
+              Giải pháp quản lý dược phẩm hiện đại, kết nối nhà thuốc và nhà
+              phân phối trong một hệ sinh thái hoàn chỉnh.
             </p>
           </div>
 
@@ -22,29 +22,36 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-[#F5FAFF]">
               <li>
                 <a
-                  href="https://dev.distributor.ibpharmacy.com.vn/"
+                  href="https://distributor.ibpharmacy.com.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-distributor-link">
+                  data-testid="footer-distributor-link"
+                >
                   Nền tảng Nhà phân phối
                 </a>
               </li>
               <li>
                 <a
-                  href="https://dev.app.ibpharmacy.com.vn/"
+                  href="https://app.ibpharmacy.com.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-pharmacy-link">
+                  data-testid="footer-pharmacy-link"
+                >
                   Nền tảng Nhà thuốc
                 </a>
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() =>
+                    document
+                      .getElementById("features")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="hover:underline transition-all duration-300 ease-in-out text-left"
-                  data-testid="footer-features-link">
+                  data-testid="footer-features-link"
+                >
                   Tính năng
                 </button>
               </li>
@@ -52,7 +59,8 @@ export function Footer() {
                 <a
                   href="#"
                   className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-pricing-link">
+                  data-testid="footer-pricing-link"
+                >
                   Báo giá
                 </a>
               </li>
@@ -64,58 +72,87 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-[#F5FAFF]">
               <li>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/watch?v=5JaDwJha2OQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-docs-link">
+                  data-testid="footer-docs-link"
+                >
                   Tài liệu hướng dẫn
                 </a>
               </li>
               <li>
                 <button
-                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="hover:underline transition-all duration-300 ease-in-out text-left"
-                  data-testid="footer-contact-link">
+                  data-testid="footer-contact-link"
+                >
                   Liên hệ
                 </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-faq-link">
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="hover:underline transition-all duration-300 ease-in-out text-left"
+                  data-testid="footer-faq-link"
+                >
                   FAQ
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:underline transition-all duration-300 ease-in-out"
-                  data-testid="footer-support-link">
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="hover:underline transition-all duration-300 ease-in-out text-left"
+                  data-testid="footer-support-link"
+                >
                   Hỗ trợ kỹ thuật
-                </a>
+                </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-white">Theo dõi chúng tôi</h4>
+            <h4 className="font-semibold mb-4 text-white">
+              Theo dõi chúng tôi
+            </h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/Eastplayers.build?locale=vi_VN"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 hover:scale-110 transition-all duration-300 ease-in-out"
-                data-testid="footer-facebook-link">
+                data-testid="footer-facebook-link"
+              >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/eastplayers/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 hover:scale-110 transition-all duration-300 ease-in-out"
-                data-testid="footer-linkedin-link">
+                data-testid="footer-linkedin-link"
+              >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/watch?v=5JaDwJha2OQ"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 hover:scale-110 transition-all duration-300 ease-in-out"
-                data-testid="footer-youtube-link">
+                data-testid="footer-youtube-link"
+              >
                 <Youtube className="h-4 w-4" />
               </a>
             </div>
@@ -123,7 +160,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-[#639AC7] mt-8 pt-8 text-center text-sm text-[#93BADA]">
-          <p>&copy; {new Date().getFullYear()} IB Pharmacy. Tất cả quyền được bảo lưu.</p>
+          <p>
+            &copy; {new Date().getFullYear()} IB Pharmacy. Tất cả quyền được bảo
+            lưu.
+          </p>
         </div>
       </div>
     </footer>
