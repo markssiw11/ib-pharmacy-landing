@@ -72,7 +72,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-[#F5FAFF]">
               <li>
                 <a
-                  href="https://www.youtube.com/watch?v=5JaDwJha2OQ"
+                  href="https://youtu.be/Xx44EL4sTrg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-300 ease-in-out"
@@ -147,7 +147,7 @@ export function Footer() {
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="https://www.youtube.com/watch?v=5JaDwJha2OQ"
+                href="https://youtu.be/Xx44EL4sTrg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 text-white rounded-lg flex items-center justify-center hover:bg-primary/20 hover:scale-110 transition-all duration-300 ease-in-out"
