@@ -46,7 +46,7 @@ export function Hero() {
             <Button
               onClick={() =>
                 window.open(
-                  "https://www.youtube.com/watch?v=5JaDwJha2OQ",
+                  "https://youtu.be/Ee2UTPwQtSU",
                   "_blank",
                   "noopener,noreferrer"
                 )
