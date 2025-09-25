@@ -31,19 +31,19 @@ export function Contact() {
     name: "",
     email: "",
     phone: "",
-    businessType: "",
+    business_type: "",
     message: "",
   });
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactRequest) => {
-      // const response = await apiRequest("POST", "/api/contact", data);
-      // return response.json();
-      return new Promise<{ message: string }>((resolve) => {
-        setTimeout(() => {
-          resolve({ message: "Yêu cầu của bạn đã được gửi thành công!" });
-        }, 1000);
-      });
+      const response = await apiRequest("POST", "/api/contact", data);
+
+      if (!response.ok) {
+        throw new Error("Gửi yêu cầu thất bại");
+      }
+
+      return response.json() as Promise<{ message: string }>;
     },
     onSuccess: (data) => {
       toast({
@@ -54,7 +54,7 @@ export function Contact() {
         name: "",
         email: "",
         phone: "",
-        businessType: "",
+        business_type: "",
         message: "",
       });
     },
@@ -75,7 +75,7 @@ export function Contact() {
       !formData.name ||
       !formData.email ||
       !formData.phone ||
-      !formData.businessType
+      !formData.business_type
     ) {
       toast({
         title: "Lỗi!",
@@ -216,9 +216,9 @@ export function Contact() {
                   <div>
                     <Label htmlFor="businessType">Loại hình kinh doanh *</Label>
                     <Select
-                      value={formData.businessType}
+                      value={formData.business_type}
                       onValueChange={(value) =>
-                        handleInputChange("businessType", value)
+                        handleInputChange("business_type", value)
                       }
                     >
                       <SelectTrigger data-testid="select-business-type">
